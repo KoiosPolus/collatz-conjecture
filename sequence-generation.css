@@ -1,0 +1,54 @@
+<h1>Collatz Conjecture Inverse Constructor</h1>
+
+<table>
+  <tr>
+    <th>Collatz Function:</th>
+    <th>Multiplier</th>
+    <th>Constant</th>
+  </tr>
+  <tr>
+    <th>F Function:</th>
+    <th>
+      <input type="text" class="functionFieldF" id="CollatzFunctionFMultiplierInputField" value="0.5" />
+    </th>
+    <th>
+      <input type="text" class="functionFieldF" id="CollatzFunctionFConstantInputField" value="0" />
+    </th>
+  </tr>
+  <tr>
+    <th>G Function:</th>
+    <th>
+      <input type="text" class="functionFieldG" id="CollatzFunctionGMultiplierInputField" value="3" />
+    </th>
+    <th>
+      <input type="text" class="functionFieldG" id="CollatzFunctionGConstantInputField" value="1" />
+    </th>
+  </tr>
+</table>
+
+<div class="greaterContainer">
+  <div class="functionTextFieldDiv">
+    Sort:
+    <input type="checkbox" class="functionField" id="sortInputField"> // Only loops:
+    <input type="checkbox" class="functionField" id="onlyLoopsInputField" checked> // Symbolic:
+    <input type="checkbox" class="functionField" id="symbolicInputField"> // Only unique?**:
+    <input type="checkbox" class="functionField" id="onlyUniqueInputField">
+  </div>
+
+  <div class="numberTextFieldDiv">Please enter number to be evaluated:
+    <input type="text" class="textField" id="numStartInputField" value="24">
+    <input type="submit" class="button" value="Evaluate" onclick="rangedNumberFGAssignment()">
+  </div>
+
+  <div id="resultsDisplayBox" style="overflow-x:auto;">
+    Results table will be displayed here:
+    <table id="resultDisplayTableHead">
+      <tr>
+        <th class='tableResultsHead'>#</th>
+        <th class='tableResultsHead'>Collatz Loop</th>
+      </tr>
+    </table>
+    <table id="resultDisplayTable">
+    </table>
+  </div>
+</div>
