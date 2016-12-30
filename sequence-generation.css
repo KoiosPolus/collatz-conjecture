@@ -1,54 +1,101 @@
-<h1>Collatz Conjecture Inverse Constructor</h1>
+body {
+  background-image: url("https://d31v04zdn5vmni.cloudfront.net/blog/wp-content/uploads/2012/02/featured-image-snippets-1-690x362.png");
+}
 
-<table>
-  <tr>
-    <th>Collatz Function:</th>
-    <th>Multiplier</th>
-    <th>Constant</th>
-  </tr>
-  <tr>
-    <th>F Function:</th>
-    <th>
-      <input type="text" class="functionFieldF" id="CollatzFunctionFMultiplierInputField" value="0.5" />
-    </th>
-    <th>
-      <input type="text" class="functionFieldF" id="CollatzFunctionFConstantInputField" value="0" />
-    </th>
-  </tr>
-  <tr>
-    <th>G Function:</th>
-    <th>
-      <input type="text" class="functionFieldG" id="CollatzFunctionGMultiplierInputField" value="3" />
-    </th>
-    <th>
-      <input type="text" class="functionFieldG" id="CollatzFunctionGConstantInputField" value="1" />
-    </th>
-  </tr>
-</table>
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 35px;
+}
 
-<div class="greaterContainer">
-  <div class="functionTextFieldDiv">
-    Sort:
-    <input type="checkbox" class="functionField" id="sortInputField"> // Only loops:
-    <input type="checkbox" class="functionField" id="onlyLoopsInputField" checked> // Symbolic:
-    <input type="checkbox" class="functionField" id="symbolicInputField"> // Only unique?**:
-    <input type="checkbox" class="functionField" id="onlyUniqueInputField">
-  </div>
+.functionFieldF {
+  width: 80%;
+  background-color: Silver;
+  text-align: center;
+}
 
-  <div class="numberTextFieldDiv">Please enter number to be evaluated:
-    <input type="text" class="textField" id="numStartInputField" value="24">
-    <input type="submit" class="button" value="Evaluate" onclick="rangedNumberFGAssignment()">
-  </div>
+.functionFieldG {
+  width: 80%;
+  background-color: Grey;
+  text-align: center;
+}
 
-  <div id="resultsDisplayBox" style="overflow-x:auto;">
-    Results table will be displayed here:
-    <table id="resultDisplayTableHead">
-      <tr>
-        <th class='tableResultsHead'>#</th>
-        <th class='tableResultsHead'>Collatz Loop</th>
-      </tr>
-    </table>
-    <table id="resultDisplayTable">
-    </table>
-  </div>
-</div>
+.functionTextFieldDiv {
+  font-family: verdana;
+  font-size: 15px;
+  color: WhiteSmoke;
+  padding-left: 20px;
+}
+
+.numberTextFieldDiv {
+  font-family: verdana;
+  font-size: 21px;
+  color: WhiteSmoke;
+}
+
+.button {
+  margin: 10px;
+}
+
+.textField {
+  margin-left: 30px;
+  width: 60%;
+}
+
+.greaterContainer {
+  background-color: rgba(192, 192, 192, 0.5);
+  //opacity: 0.5;
+  width: 95%;
+  height: 90%;
+  min-height: 500px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#resultsDisplayBox {
+  background-color: lightblue;
+  margin-left: 5%;
+  padding: 5%;
+  height: 60%;
+  width: 80%;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+#resultDisplayTable {
+  letter-spacing: 0px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background-color: Silver
+}
+
+tr:nth-child(odd) {
+  background-color: SlateGray
+}
+
+.tableNumbers {
+  width: 30px;
+}
+
+.tableResults {
+  text-align: left;
+  padding-left: 7px;
+}
+
+.tableResultsHead {
+  height: 50px;
+  background: Silver;
+  color: black;
+  font-size: 20px;
+}
